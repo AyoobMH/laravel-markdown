@@ -13,7 +13,11 @@ it('can render markdown', function () {
         ```
         MD;
 
+    ray(markdownRenderer());
+
     $html = markdownRenderer()->toHtml($markdown);
+
+    ray($html);
 
     expect($html)->toMatchSnapshot();
 });

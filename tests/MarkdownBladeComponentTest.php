@@ -2,7 +2,10 @@
 
 namespace Spatie\LaravelMarkdown\Tests;
 
+use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
+
+uses(InteractsWithViews::class);
 
 it('the component can render markdown', function () {
     $renderedView = (string)$this->blade(
